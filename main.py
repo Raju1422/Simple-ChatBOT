@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
-class AiChatBot:
+class ChatBot:
 
     def __init__(self) -> None:
         self.name = input("Please Enter your Name : ")
@@ -21,6 +21,7 @@ class AiChatBot:
             url=f"http://api.weatherapi.com/v1/current.json?key={WEATHER_API_KEY}&q={city}"
             response =requests.get(url)
             data= response.json()
+            print(data)
             return data
         except Exception as e:
             return e
@@ -111,5 +112,5 @@ class AiChatBot:
 
 
 if __name__ == "__main__":
-    bot = AiChatBot()
+    bot = ChatBot()
     bot.greet()

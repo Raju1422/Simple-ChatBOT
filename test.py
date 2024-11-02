@@ -1,8 +1,8 @@
 import unittest
-from main import AiChatBot
+from main import ChatBot
 class TestAiChatBot(unittest.TestCase):
     def setUp(self):
-        self.bot = AiChatBot()
+        self.bot = ChatBot()
 
     def test_addition(self):
         result = self.bot.calculate("1", 10, 5)
