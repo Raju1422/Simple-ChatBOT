@@ -110,6 +110,6 @@ class AiChatBot:
             return "An error occurred during calculation."
 
 
-
-bot = AiChatBot()
-bot.greet()
+if __name__ == "__main__":
+    bot = AiChatBot()
+    bot.greet()
